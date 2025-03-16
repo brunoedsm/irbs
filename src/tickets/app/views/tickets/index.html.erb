@@ -1,0 +1,15 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Pedidos" %>
+
+<h1>Pedidos</h1>
+
+<div id="tickets">
+  <ul>
+  <% @tickets.each do |ticket| %>
+    <li><%= render ticket %><%= link_to "Exibir", ticket %></li>
+  <% end %>
+  </ul>
+</div>
+
+<%= link_to "Novo", new_ticket_path %>
